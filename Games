@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <cstdlib>
+#include <time.h>
+
+int main() {
+	
+	srand (time(0));
+	
+	int number,guess;
+	
+	number = rand () % 9999 + 0;
+  
+	int Try = 1;
+	
+	while (guess != number){
+  
+	Try++;
+	
+  printf ("Donner le nombre estimer ");
+	
+	scanf ("%d",&guess);
+	
+	if (guess<number)
+	
+		printf ("Le nombre estimer est plus petit que le nombre cherché\n");
+	
+	else if (guess>number)
+	
+		printf ("Le nombre estimer est plus grand que le nombre cherché\n");
+	
+	else 
+	
+		printf ("Bravo \n");
+	
+	} 
+	
+	printf ("Tu as essais %d fois \n",&Try);
+	
+	system("PAUSE");
+	
+}
