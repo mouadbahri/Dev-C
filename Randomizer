@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <cstdlib>
+#include <time.h>
+
+int main() {
+	
+	srand (time(0));
+	
+	int number,guess;
+	int Try = 0;
+	
+	number = rand () % 10000 + 0;
+	
+		printf ("Le nombre mesteriux est entre 0 et 10000 \n");
+	while (guess != number){	
+		printf ("Donner le nombre estimer ");
+		
+		scanf ("%d",&guess);
+		
+		if(guess < number) {
+			Try++;
+			printf ("Le nombre estimer est plus petit que le nombre cherché\n");
+		}else if(guess > number){
+			Try++;
+			printf ("Le nombre estimer est plus grand que le nombre cherché\n");
+		}else{
+			Try++;
+			printf ("Bravo \n");
+		}
+	} 
+	
+	printf ("Tu as essais %d fois \n",Try);
+	
+	system("PAUSE");
+	
+}
